@@ -1,0 +1,9 @@
+.container
+{
+    justify-content: center;
+}
+
+#list-title
+{
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
