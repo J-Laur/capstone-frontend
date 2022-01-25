@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import React, {Fragment} from 'react';
 import './App.css';
+import InputMovie from "./components/InputMovie";
+import ListMovie from './components/ListMovie';
+import MovieLogin from './components/MovieLogin';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import MovieSignin from './components/MovieSignin';
+import Home from './components/Home';
+import Trailers from './components/Trailers';
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          MyMovie
-        </a>
-      </header>
-    </div>
-  );
-}
+    <Router>
+     <Routes>
+     <Route exact path="/list" element = {[<InputMovie/>,<ListMovie/>]} />
+     <Route exact path="/signup" element={<MovieSignin/>}/>
+     <Route exact path="/home" element={<Home/>}/>
+     <Route exact path="/trailers" element={<Trailers/>}/>
+       <Route exact path="/" element={<MovieLogin/>}/>
+       </Routes>
+   </Router>
+  )};
 
 export default App;
