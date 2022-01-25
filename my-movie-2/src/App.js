@@ -1,30 +1,26 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, {Fragment} from 'react';
+import './App.css';
+import InputMovie from "./components/InputMovie";
+import ListMovie from './components/ListMovie';
+import MovieLogin from './components/MovieLogin';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import MovieSignin from './components/MovieSignin';
 import Home from './components/Home';
-import UserProfile from './components/UserProfile';
-import LogIn from "./components/Login";
-    
-    function App() {
+import Trailers from './components/Trailers';
 
-      const [currentUser, setCurrentUser] = useState("")
-      
-      const mockLogIn = (logInInfo) => {
 
-        const newUser = {...currentUser}
-        newUser.userName = logInInfo.userName
-        setCurrentUser(newUser) 
 
-      }
+function App() {
+  return (
+    <Router>
+     <Routes>
+     <Route exact path="/list" element = {[<InputMovie/>,<ListMovie/>]} />
+     <Route exact path="/signup" element={<MovieSignin/>}/>
+     <Route exact path="/home" element={<Home/>}/>
+     <Route exact path="/trailers" element={<Trailers/>}/>
+       <Route exact path="/" element={<MovieLogin/>}/>
+       </Routes>
+   </Router>
+  )};
 
-       return (
-         <BrowserRouter>
-            <Routes>
-              <Route path= "/"/>
-              <Route path="/UserProfile" element={<UserProfile userName={currentUser.userName} />}/>
-              <Route path="/Login" element={<LogIn user={currentUser} mockLogIn={mockLogIn}/>}/>
-           </Routes>
-         </BrowserRouter>
-       );
-     }
-    
-    export default App;
+export default App;
