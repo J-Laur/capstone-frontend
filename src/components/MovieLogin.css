@@ -1,55 +1,53 @@
+
+ 
+
 body, html {
-    height: 100%;
-    font-family: 'Helvetica', 'Arial', sans-serif;
-  }
-  
-  * {
-    box-sizing: border-box;
-   
-  }
+   height: 100%;
+   font-family: 'Helvetica', 'Arial', sans-serif;
+ }
  
-  .background-login {
-    
-    background-image: url("https://www.fool.ca/wp-content/uploads/2020/11/movie-theatre.jpg");
+ * {
+   box-sizing: border-box;
   
-    height: 100%;
-    min-height: 850px;
-  
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+ }
+
+  #bg {
+   position: fixed; 
+   top: 0; 
+   left: 0; 
     
+   min-width: 100%;
+   min-height: 100%;
+ }
+
+
+ .cont-login {
+   position: absolute;
+   right: 0;
+   margin: 50px;
+   max-width: 600px;
+   padding: 16px;
+   background-color: #222222;
+   border-radius: 20px;
+
    
-  }
-  
-  
-  .cont-login {
-    position: absolute;
-    right: 0;
-    margin: 50px;
-    max-width: 600px;
-    padding: 16px;
+ }
+
+ 
+ #logo-login {
     background-color: #222222;
-    border-radius: 20px;
- 
+    border-color: #222222;
+    border-radius:25px;
+ }
+
+ .login-btn{
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+      background-color: #008CBA;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
     
-  }
- 
-  
-  #logo-login {
-     background-color: #222222;
-     border-color: #222222;
-     border-radius:25px;
-  }
- 
-  .login-btn{
-       box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-       background-color: #008CBA;
-       color: white;
-       padding: 16px 20px;
-       border: none;
-       cursor: pointer;
-       width: 100%;
-       opacity: 0.9;
-     
-  }
+ }

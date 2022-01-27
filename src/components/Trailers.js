@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import './Home.css';
 import Nav from "./nav";
@@ -16,6 +17,7 @@ function Trailer() {
     const [releaseDate, setReleasedate] = useState("");
     const [overview, setOverview] = useState("");
     const [rating, setRating] = useState("");
+    
 
 
     const getTrailer = async e => {
@@ -29,7 +31,13 @@ function Trailer() {
         setTitle((json.results[0].original_title));
         setOverview((json.results[0].overview));
         setReleasedate((json.results[0].release_date));
-        setRating((json.results[0].vote_average));
+        setRating((json.results[0].vote_average));   
+
+
+      const backdropURL = `https://image.tmdb.org/t/p/original/` + json.results[0].backdrop_path;
+      console.log(backdropURL);
+    document.body.style.backgroundImage = `url(${backdropURL})`;
+    
 
         console.log(title);
         console.log(releaseDate);
@@ -69,7 +77,8 @@ function Trailer() {
             <style> {document.body.style.backgroundColor = "#222222"} </style>
             <br />
             <br />
-            <form className="search-cont" onSubmit={getTrailer} >
+
+   <form className="search-cont" onSubmit={getTrailer} >
                 <input placeholder="Specific Movie Name"
                     type="text"
                     className="form-control-lg border border-dark border-5"
@@ -79,8 +88,15 @@ function Trailer() {
 
                 <button className="btn btn-dark" id="search-btn" type="submit"> Search </button>
 
-            </form>
+            </form> 
+
+
+          
             <br />
+            <br />
+            <br />
+            <br />
+             <br />
             <br />
             <br />
             <br />

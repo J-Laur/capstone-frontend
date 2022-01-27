@@ -95,30 +95,40 @@ function Home() {
 
   return (
     <div>
+      
       <Nav></Nav>
       <style> {(document.body.style.backgroundColor = "#222222")} </style>
       <br />
       <br />
-      <form className="search-cont" onSubmit={getSearch}>
-        <input
-          placeholder="Keyword"
-          type="text"
-          className="form-control-lg border border-dark border-5"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
-        <button className="btn btn-dark" id="search-btn" type="submit">
-          {" "}
-          Search{" "}
-        </button>
-      </form>
+
+      <style> {document.body.style.backgroundColor = "#222222"} </style>
+            <br />
+            <br />
+
+   <form className="search-cont" onSubmit={getSearch} >
+                <input placeholder="Specific Movie Name"
+                    type="text"
+                    className="form-control-lg border border-dark border-5"
+                    value={search}
+                    onChange={e => setSearch(e.target.value)} />
+
+
+                <button className="btn btn-dark" id="search-btn" type="submit"> Search </button>
+
+            </form> 
+   
+      
+
+
+     
       <br />
 
       <br />
+   
       <br />
-      <br />
+
       <div class="container">
-        <h1 className="search-title">SEARCH RESULTS</h1>
+        <h1 className="search-title">Search Results</h1>
         <div class="row">
           {isLoading ? (
             <h1 className="text-white">Fetching Movies...</h1>
@@ -129,10 +139,11 @@ function Home() {
                   <img
                     src={`https://image.tmdb.org/t/p/original/${data4.poster_path}`}
                   />
-                  <p class="card-text font-weight-bold">
+                  <p id = "rating" class="card-text text-center">{`${data4.vote_average}`}/10</p>
+                  <p class="card-text font-weight-bold text-center text-white">
                     {data4.original_title}
                   </p>
-                  <p class="card-text">{`Release date: ${data4.release_date}`}</p>
+                  {/* <p class="card-text">{`Release date: ${data4.release_date}`}</p> */}
                 </div>
               </div>
             ))
@@ -140,7 +151,7 @@ function Home() {
         </div>
       </div>
 
-      <br />
+  
 
       <div class="container">
         <h1 className="text-light">Trending</h1>
@@ -154,10 +165,11 @@ function Home() {
                   <img
                     src={`https://image.tmdb.org/t/p/original/${data.poster_path}`}
                   />
-                  <p class="card-text font-weight-bold">
+                  <p id="rating" class="card-text text-center">{`${data.vote_average}`}/10</p>
+                  <p class="card-text font-weight-bold text-center text-white">
                     {data.original_title}
                   </p>
-                  <p class="card-text">{`Release date: ${data.release_date}`}</p>
+                  {/* <p class="card-text">{`Release date: ${data.release_date}`}</p> */}
                 </div>
               </div>
             ))
@@ -165,7 +177,7 @@ function Home() {
         </div>
       </div>
 
-      <br />
+  
 
       <div class="container">
         <h1 className="text-light">Popular</h1>
@@ -179,10 +191,11 @@ function Home() {
                   <img
                     src={`https://image.tmdb.org/t/p/original/${data2.poster_path}`}
                   />
-                  <p class="card-text font-weight-bold">
+                  <p id="rating" class="card-text text-center">{`${data2.vote_average}`}/10</p>
+                  <p class="card-text font-weight-bold text-center text-white">
                     {data2.original_title}
                   </p>
-                  <p class="card-text">{`Release date: ${data2.release_date}`}</p>
+                  {/* <p class="card-text">{`Release date: ${data2.release_date}`}</p> */}
                 </div>
               </div>
             ))
@@ -191,7 +204,6 @@ function Home() {
       </div>
 
 
-      <br />
 
       <div class="container">
         <h1 className="text-light">Showing Now</h1>
@@ -205,10 +217,11 @@ function Home() {
                   <img
                     src={`https://image.tmdb.org/t/p/original/${data5.poster_path}`}
                   />
-                  <p class="card-text font-weight-bold">
+                  <p id="rating" class="card-text text-center">{`${data5.vote_average}`}/10</p>
+                  <p class="card-text font-weight-bold text-center text-white">
                     {data5.original_title}
                   </p>
-                  <p class="card-text">{`Release date: ${data5.release_date}`}</p>
+                  {/* <p class="card-text">{`Release date: ${data5.release_date}`}</p> */}
                 </div>
               </div>
             ))
@@ -217,7 +230,7 @@ function Home() {
       </div>
 
 
-      <br />
+  
       <div class="container">
         <h1 className="text-light">Upcoming</h1>
         <div class="row">
@@ -230,10 +243,10 @@ function Home() {
                   <img
                     src={`https://image.tmdb.org/t/p/original/${data3.poster_path}`}
                   />
-                  <p class="card-text font-weight-bold">
+                  <p class="card-text font-weight-bold text-center text-white">
                     {data3.original_title}
                   </p>
-                  <p class="card-text">{`Release date: ${data3.release_date}`}</p>
+                  <p class="card-text text-center text-white">{`Release date: ${data3.release_date}`}</p>
                 </div>
               </div>
             ))
