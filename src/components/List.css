@@ -1,9 +1,31 @@
 .container
 {
     justify-content: center;
+
+}
+
+#movie-list
+{
+    justify-content: center;
+    padding-top: 60.89px;
+
 }
 
 #list-title
 {
     font-family: 'Helvetica', 'Arial', sans-serif;
 }
+
+.search-title-input
+{
+  display: none;
+  color: white;
+}
+
+#list-button
+{
+  margin-left: 57px;
+
+}
+
+ 

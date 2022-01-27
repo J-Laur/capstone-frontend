@@ -37,8 +37,11 @@ const ListMovie = () => {
     
     return (
     <Fragment>
+     
+    
        <style> {document.body.style.backgroundColor = "#222222"} </style>
-        <div className = "container">
+       
+        <div className = "container" id = "movie-list">
 <table className="table mt-5 text-center table-dark table-striped table-bordered  " >
     <caption> Current List of Movies to Watch:</caption>
     <thead className="font-italic">

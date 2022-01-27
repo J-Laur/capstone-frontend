@@ -1,3 +1,4 @@
+
 import React, {useState, Fragment} from "react";
 import { Navigate } from "react-router-dom";
 import { Link } from "react-router-dom"
@@ -58,6 +59,8 @@ return (
    <Fragment>
        <div className="background-login">
         <style> {document.body.style.backgroundColor = "#222222"} </style>
+        <img src="https://www.fool.ca/wp-content/uploads/2020/11/movie-theatre.jpg" id="bg" alt=""></img>
+       
        
 
     <div className="overall-inf " >
