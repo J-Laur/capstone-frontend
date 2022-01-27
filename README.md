@@ -6,7 +6,8 @@ This is the frontend for the Capstone MyMovie application. Through connecting to
 
 <img width="1440" alt="Screen Shot 2022-01-26 at 11 05 59 PM" src="https://user-images.githubusercontent.com/92334995/151290119-17068de8-6457-4e91-a5fa-3bf5f82bc05d.png">
 
-<img width="1440" alt="Screen Shot 2022-01-26 at 11 06 15 PM" src="https://user-images.githubusercontent.com/92334995/151290149-92637955-87ef-40a3-98c3-e15d9f129b5b.png">
+
+<img width="1440" alt="Screen Shot 2022-01-26 at 11 09 38 PM" src="https://user-images.githubusercontent.com/92334995/151290410-a1d1cdf7-0e4c-4cc1-ade1-e479c01f01b6.png">
 
 
 <img width="1440" alt="Screen Shot 2022-01-26 at 11 07 13 PM" src="https://user-images.githubusercontent.com/92334995/151290226-a04ad6be-faea-41b5-9c80-37b96d3a535a.png">
