@@ -98,6 +98,15 @@ if (data.length !== 0) {
                 data.map((data) => (
                   <div>
                     <div class="card">
+                    <td>
+                      
+                      <button
+                          className="btn btn-dark" id = "list-button"
+                          onClick={(e) => AddMovie(data.original_title)} >
+                          Add
+                        </button>
+                
+                      </td>
                       <img
                         src={`https://image.tmdb.org/t/p/original/${data.poster_path}`}
                       />
@@ -107,16 +116,6 @@ if (data.length !== 0) {
                       <p class="card-text font-weight-bold text-center text-white">
                         {data.original_title}
                       </p>
-
-                      <td>
-                      
-                      <button
-                          className="btn btn-dark" id = "list-button"
-                          onClick={(e) => AddMovie(data.original_title)} >
-                          Add
-                        </button>
-                
-                      </td>
                     </div>
                   </div>
                 ))
@@ -131,4 +130,3 @@ if (data.length !== 0) {
 };
 
 export default InputMovie;
-
