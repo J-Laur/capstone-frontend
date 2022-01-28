@@ -39,6 +39,7 @@ try {
 return (
    <Fragment>
        <style> {document.body.style.backgroundColor = "#222222"} </style>
+       <img src="https://www.fool.ca/wp-content/uploads/2020/11/movie-theatre.jpg" id="bg-2" alt=""></img>
        <div className="background-login">
     <div className="overall-info-2 " >
     <div className="login-info" >
